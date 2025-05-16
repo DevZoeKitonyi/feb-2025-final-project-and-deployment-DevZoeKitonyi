@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart | LUXE</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/cart.css" />
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header id="header" class="header">
+      <div class="container">
+        <div class="header-wrapper">
+          <div class="logo">
+            <a href="index.html">
+              <h1>LUXE</h1>
+            </a>
+          </div>
+          
+          <nav class="nav-desktop">
+            <ul class="nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Shop</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+          
+          <div class="header-actions">
+            <a href="search.html" class="action-btn" aria-label="Search">
+              <i class="fas fa-search"></i>
+            </a>
+            <a href="account.html" class="action-btn" aria-label="My Account">
+              <i class="fas fa-user"></i>
+            </a>
+            <a href="cart.html" class="action-btn cart-btn active" aria-label="Cart">
+              <i class="fas fa-shopping-bag"></i>
+              <span class="cart-count">0</span>
+            </a>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Mobile Navigation -->
+      <div class="mobile-nav">
+        <div class="container">
+          <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="search.html" class="with-icon"><i class="fas fa-search"></i> Search</a></li>
+            <li><a href="account.html" class="with-icon"><i class="fas fa-user"></i> Account</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Shopping Cart</h1>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>Cart</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+      <div class="container">
+        <div class="cart-wrapper">
+          <!-- Cart Items -->
+          <div class="cart-items" id="cart-items">
+            <!-- Cart items will be loaded here via JavaScript -->
+            <div class="cart-loading">
+              <div class="loading-spinner"></div>
+              <p>Loading your cart...</p>
+            </div>
+          </div>
+          
+          <!-- Cart Summary -->
+          <div class="cart-summary" id="cart-summary">
+            <!-- Cart summary will be loaded here via JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-column">
+            <h3 class="footer-title">LUXE</h3>
+            <p class="footer-text">
+              Discover premium quality products at competitive prices. We're committed to providing
+              an exceptional shopping experience.
+            </p>
+            <div class="footer-social">
+              <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-title">Shop</h3>
+            <ul class="footer-links">
+              <li><a href="products.html">All Products</a></li>
+              <li><a href="products.html?category=electronics">Electronics</a></li>
+              <li><a href="products.html?category=wearables">Wearables</a></li>
+              <li><a href="products.html?category=computers">Computers</a></li>
+              <li><a href="products.html?featured=true">Featured Items</a></li>
+              <li><a href="products.html?discount=true">Discounted Items</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-title">Support</h3>
+            <ul class="footer-links">
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="faq.html">FAQs</a></li>
+              <li><a href="shipping.html">Shipping & Returns</a></li>
+              <li><a href="warranty.html">Warranty Information</a></li>
+              <li><a href="tracking.html">Order Tracking</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-title">Contact Us</h3>
+            <ul class="footer-contact">
+              <li><i class="fas fa-map-marker-alt"></i> 123 Commerce St.<br />New York, NY 10001</li>
+              <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+              <li><i class="fas fa-envelope"></i> support@luxe.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="copyright">&copy; <span id="current-year"></span> LUXE. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="sitemap.html">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/products.js" type="module"></script>
+    <script src="js/cart.js" type="module"></script>
+    <script src="js/main.js" type="module"></script>
+  </body>
+</html>
