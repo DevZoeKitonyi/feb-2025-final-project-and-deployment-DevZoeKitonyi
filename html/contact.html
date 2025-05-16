@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | LUXE</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <style>
+      /* Contact Page Specific Styles */
+      .contact-hero {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url('https://images.pexels.com/photos/1416530/pexels-photo-1416530.jpeg?auto=compress&cs=tinysrgb&w=1920');
+        background-size: cover;
+        background-position: center;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        color: white;
+        margin-top: 70px;
+      }
+
+      .contact-section {
+        padding: var(--space-16) 0;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+      }
+
+      .contact-info {
+        background-color: var(--color-gray-50);
+        padding: var(--space-6);
+        border-radius: var(--radius-lg);
+      }
+
+      .contact-method {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: var(--space-6);
+      }
+
+      .contact-icon {
+        width: 40px;
+        height: 40px;
+        background-color: var(--color-primary-50);
+        color: var(--color-primary-600);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: var(--space-4);
+        flex-shrink: 0;
+      }
+
+      .contact-details h3 {
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-bottom: var(--space-1);
+      }
+
+      .contact-details p {
+        color: var(--color-gray-600);
+        line-height: 1.5;
+      }
+
+      .contact-form {
+        background-color: white;
+        padding: var(--space-6);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .form-group {
+        margin-bottom: var(--space-4);
+      }
+
+      .form-group label {
+        display: block;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--color-gray-700);
+        margin-bottom: var(--space-1);
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: var(--space-3);
+        border: 1px solid var(--color-gray-300);
+        border-radius: var(--radius-md);
+        font-size: 1rem;
+        transition: border-color var(--transition-fast);
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: var(--color-primary-500);
+        box-shadow: 0 0 0 3px var(--color-primary-100);
+      }
+
+      .form-group textarea {
+        height: 150px;
+        resize: vertical;
+      }
+
+      .map-container {
+        height: 400px;
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        margin-top: var(--space-8);
+      }
+
+      .map-container iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      @media (min-width: 768px) {
+        .contact-grid {
+          grid-template-columns: 1fr 2fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header id="header" class="header">
+      <div class="container">
+        <div class="header-wrapper">
+          <div class="logo">
+            <a href="index.html">
+              <h1>LUXE</h1>
+            </a>
+          </div>
+          
+          <nav class="nav-desktop">
+            <ul class="nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Shop</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+          </nav>
+          
+          <div class="header-actions">
+            <a href="search.html" class="action-btn" aria-label="Search">
+              <i class="fas fa-search"></i>
+            </a>
+            <a href="account.html" class="action-btn" aria-label="My Account">
+              <i class="fas fa-user"></i>
+            </a>
+            <a href="cart.html" class="action-btn cart-btn" aria-label="Cart">
+              <i class="fas fa-shopping-bag"></i>
+              <span class="cart-count">0</span>
+            </a>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Mobile Navigation -->
+      <div class="mobile-nav">
+        <div class="container">
+          <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="search.html" class="with-icon"><i class="fas fa-search"></i> Search</a></li>
+            <li><a href="account.html" class="with-icon"><i class="fas fa-user"></i> Account</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+      <div class="container">
+        <h1 class="hero-title">Contact Us</h1>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Contact Information -->
+          <div class="contact-info">
+            <div class="contact-method">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Visit Us</h3>
+                <p>
+                  123 Commerce Street<br />
+                  New York, NY 10001<br />
+                  United States
+                </p>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Call Us</h3>
+                <p>
+                  Phone: (555) 123-4567<br />
+                  Fax: (555) 123-4568
+                </p>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Email Us</h3>
+                <p>
+                  General Inquiries: info@luxe.com<br />
+                  Support: support@luxe.com<br />
+                  Sales: sales@luxe.com
+                </p>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="contact-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Business Hours</h3>
+                <p>
+                  Monday - Friday: 9:00 AM - 6:00 PM<br />
+                  Saturday: 10:00 AM - 4:00 PM<br />
+                  Sunday: Closed
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form">
+            <h2 class="section-title">Send Us a Message</h2>
+            <p class="section-subtitle mb-6">We'll get back to you as soon as possible.</p>
+            
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+              
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343008!2d-74.0059418846785!3d40.74076794379132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1629335995369!5m2!1sen!2sus"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-column">
+            <h3 class="footer-title">LUXE</h3>
+            <p class="footer-text">
+              Discover premium quality products at competitive prices. We're committed to providing
+              an exceptional shopping experience.
+            </p>
+            <div class="footer-social">
+              <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-title">Shop</h3>
+            <ul class="footer-links">
+              <li><a href="products.html">All Products</a></li>
+              <li><a href="products.html?category=electronics">Electronics</a></li>
+              <li><a href="products.html?category=wearables">Wearables</a></li>
+              <li><a href="products.html?category=computers">Computers</a></li>
+              <li><a href="products.html?featured=true">Featured Items</a></li>
+              <li><a href="products.html?discount=true">Discounted Items</a></li>
+            </ul>
+          </div>
