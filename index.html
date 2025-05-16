@@ -1,1 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LUXE | Premium Shopping Experience</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header id="header" class="header">
+      <div class="container">
+        <div class="header-wrapper">
+          <div class="logo">
+            <a href="index.html">
+              <h1>LUXE</h1>
+            </a>
+          </div>
+          
+          <nav class="nav-desktop">
+            <ul class="nav-links">
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="products.html">Shop</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+          
+          <div class="header-actions">
+            <a href="search.html" class="action-btn" aria-label="Search">
+              <i class="fas fa-search"></i>
+            </a>
+            <a href="account.html" class="action-btn" aria-label="My Account">
+              <i class="fas fa-user"></i>
+            </a>
+            <a href="cart.html" class="action-btn cart-btn" aria-label="Cart">
+              <i class="fas fa-shopping-bag"></i>
+              <span class="cart-count">0</span>
+            </a>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Mobile Navigation -->
+      <div class="mobile-nav">
+        <div class="container">
+          <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="search.html" class="with-icon"><i class="fas fa-search"></i> Search</a></li>
+            <li><a href="account.html" class="with-icon"><i class="fas fa-user"></i> Account</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
 
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">Elevate Your Lifestyle</h1>
+          <p class="hero-subtitle">Premium products curated for the modern consumer</p>
+          <div class="hero-buttons">
+            <a href="products.html" class="btn btn-primary">Shop Now</a>
+            <a href="about.html" class="btn btn-outline">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+      <div class="container">
+        <div class="features-grid">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-truck"></i>
+            </div>
+            <h3 class="feature-title">Free Shipping</h3>
+            <p class="feature-text">On all orders over $100</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-undo"></i>
+            </div>
+            <h3 class="feature-title">Easy Returns</h3>
+            <p class="feature-text">30-day hassle-free returns</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3 class="feature-title">Secure Payment</h3>
+            <p class="feature-text">Protected by the best</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-headset"></i>
+            </div>
+            <h3 class="feature-title">24/7 Support</h3>
+            <p class="feature-text">Dedicated to help you</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Featured Products</h2>
+          <p class="section-subtitle">Our most popular premium items</p>
+        </div>
+        <div class="products-grid" id="featured-products-container">
+          <!-- Products will be loaded here via JavaScript -->
+        </div>
+        <div class="section-footer">
+          <a href="products.html" class="btn btn-secondary">View All Products</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Arrivals Section -->
+    <section class="new-arrivals">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">New Arrivals</h2>
+          <p class="section-subtitle">Fresh additions to our collection</p>
+        </div>
+        <div class="products-grid" id="new-products-container">
+          <!-- Products will be loaded here via JavaScript -->
+        </div>
+        <div class="section-footer">
+          <a href="products.html?filter=new" class="btn btn-secondary">View All New Arrivals</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Promo Section -->
+    <section class="promo">
+      <div class="container">
+        <div class="promo-wrapper">
+          <div class="promo-content">
+            <h2 class="promo-title">Summer Sale</h2>
+            <p class="promo-subtitle">Up to 40% off on select items</p>
+            <a href="products.html?filter=sale" class="btn btn-white">Shop Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Shop By Category</h2>
+          <p class="section-subtitle">Find exactly what you need</p>
+        </div>
+        <div class="categories-grid">
+          <a href="products.html?category=electronics" class="category-item">
+            <div class="category-image">
+              <img src="https://images.pexels.com/photos/3394665/pexels-photo-3394665.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Electronics" />
+            </div>
+            <h3 class="category-title">Electronics</h3>
+          </a>
+          <a href="products.html?category=wearables" class="category-item">
+            <div class="category-image">
+              <img src="https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Wearables" />
+            </div>
+            <h3 class="category-title">Wearables</h3>
+          </a>
+          <a href="products.html?category=computers" class="category-item">
+            <div class="category-image">
+              <img src="https://images.pexels.com/photos/705675/pexels-photo-705675.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Computers" />
+            </div>
+            <h3 class="category-title">Computers</h3>
+          </a>
+          <a href="products.html?category=accessories" class="category-item">
+            <div class="category-image">
+              <img src="https://images.pexels.com/photos/5082579/pexels-photo-5082579.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Accessories" />
+            </div>
+            <h3 class="category-title">Accessories</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+      <div class="container">
+        <div class="newsletter-wrapper">
+          <div class="newsletter-content">
+            <h2 class="newsletter-title">Subscribe to our newsletter</h2>
+            <p class="newsletter-text">Get the latest updates on new products and upcoming sales.</p>
+            <form class="newsletter-form" id="newsletter-form">
+              <input type="email" placeholder="Your email address" required />
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-column">
+            <h3 class="footer-title">LUXE</h3>
+            <p class="footer-text">
+              Discover premium quality products at competitive prices. We're committed to providing
+              an exceptional shopping experience.
+            </p>
+            <div class="footer-social">
+              <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-title">Shop</h3>
+            <ul class="footer-links">
+              <li><a href="products.html">All Products</a></li>
+              <li><a href="products.html?category=electronics">Electronics</a></li>
+              <li><a href="products.html?category=wearables">Wearables</a></li>
+              <li><a href="products.html?category=computers">Computers</a></li>
+              <li><a href="products.html?featured=true">Featured Items</a></li>
+              <li><a href="products.html?discount=true">Discounted Items</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-title">Support</h3>
+            <ul class="footer-links">
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="faq.html">FAQs</a></li>
+              <li><a href="shipping.html">Shipping & Returns</a></li>
+              <li><a href="warranty.html">Warranty Information</a></li>
+              <li><a href="tracking.html">Order Tracking</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-title">Contact Us</h3>
+            <ul class="footer-contact">
+              <li><i class="fas fa-map-marker-alt"></i> 123 Commerce St.<br />New York, NY 10001</li>
+              <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+              <li><i class="fas fa-envelope"></i> support@luxe.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="copyright">&copy; <span id="current-year"></span> LUXE. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="sitemap.html">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+  </body>
+</html>
